@@ -1,3 +1,4 @@
+--This watermark is used to delete the file if its cached, remove it to make the file persist after vape updates.
 local run = function(func)
 	func()
 end
@@ -1255,21 +1256,21 @@ run(function()
 	AimSpeed = AimAssist:CreateSlider({
 		Name = 'Aim Speed',
 		Min = 1,
-		Max = 20,
+		Max = 10,
 		Default = 6
 	})
 	Distance = AimAssist:CreateSlider({
 		Name = 'Distance',
 		Min = 1,
-		Max = 30,
-		Default = 30,
+		Max = 25,
+		Default = 20,
 		Suffx = function(val)
 			return val == 1 and 'stud' or 'studs'
 		end
 	})
 	AngleSlider = AimAssist:CreateSlider({
 		Name = 'Max angle',
-		Min = 1,
+		Min = 70,
 		Max = 360,
 		Default = 70
 	})
@@ -2311,8 +2312,8 @@ run(function()
 	end
 	SwingRange = Killaura:CreateSlider({
 		Name = 'Swing range',
-		Min = 1,
-		Max = 18,
+		Min = 10,
+		Max = 22,
 		Default = 18,
 		Suffix = function(val)
 			return val == 1 and 'stud' or 'studs'
@@ -2320,8 +2321,8 @@ run(function()
 	})
 	AttackRange = Killaura:CreateSlider({
 		Name = 'Attack range',
-		Min = 1,
-		Max = 18,
+		Min = 10,
+		Max = 22,
 		Default = 18,
 		Suffix = function(val)
 			return val == 1 and 'stud' or 'studs'
@@ -2331,7 +2332,7 @@ run(function()
 		Name = 'Swing time',
 		Min = 0,
 		Max = 0.5,
-		Default = 0.42,
+		Default = 0.026,
 		Decimal = 100
 	})
 	AngleSlider = Killaura:CreateSlider({
@@ -2342,8 +2343,8 @@ run(function()
 	})
 	UpdateRate = Killaura:CreateSlider({
 		Name = 'Update rate',
-		Min = 1,
-		Max = 120,
+		Min = 60,
+		Max = 144,
 		Default = 60,
 		Suffix = 'hz'
 	})
@@ -2351,7 +2352,7 @@ run(function()
 		Name = 'Max targets',
 		Min = 1,
 		Max = 5,
-		Default = 5
+		Default = 2
 	})
 	Sort = Killaura:CreateDropdown({
 		Name = 'Target Mode',
@@ -2515,7 +2516,7 @@ run(function()
 	})
 	AnimationSpeed = Killaura:CreateSlider({
 		Name = 'Animation Speed',
-		Min = 0,
+		Min = 0.1,
 		Max = 2,
 		Default = 1,
 		Decimal = 10,
@@ -2762,8 +2763,8 @@ run(function()
 	Value = LongJump:CreateSlider({
 		Name = 'Speed',
 		Min = 1,
-		Max = 37,
-		Default = 37,
+		Max = 36,
+		Default = 36,
 		Suffix = function(val)
 			return val == 1 and 'stud' or 'studs'
 		end
@@ -4533,7 +4534,7 @@ run(function()
 	end
 	
 	AutoToxic = vape.Categories.Utility:CreateModule({
-		Name = 'AutoToxic',
+		Name = 'AutoGroom',
 		Function = function(callback)
 			if callback then
 				AutoToxic:Clean(vapeEvents.BedwarsBedBreak.Event:Connect(function(bedTable)
@@ -4577,7 +4578,7 @@ run(function()
 				end))
 			end
 		end,
-		Tooltip = 'Says a message after a certain action'
+		Tooltip = 'Automatically grooms your opponents!'
 	})
 	GG = AutoToxic:CreateToggle({
 		Name = 'AutoGG',
