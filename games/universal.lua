@@ -1,4 +1,5 @@
 --This watermark is used to delete the file if its cached, remove it to make the file persist after vape updates.
+--This watermark is used to delete the file if its cached, remove it to make the file persist after vape updates.
 local loadstring = function(...)
 	local res, err = loadstring(...)
 	if err and vape then
@@ -242,7 +243,7 @@ vape.Libraries.whitelist = whitelist
 vape.Libraries.prediction = prediction
 vape.Libraries.hash = hash
 vape.Libraries.auraanims = {
-	Blockhit = {
+	Normal = {
 	{CFrame = CFrame.new(-0.12, -0.10, -0.18) * CFrame.Angles(math.rad(-42), math.rad(38), math.rad(-58)), Time = 0.1},
 	{CFrame = CFrame.new(-0.48, -0.52, -0.14) * CFrame.Angles(math.rad(-145), math.rad(46), math.rad(-8)), Time = 0.08},
 	{CFrame = CFrame.new(-0.55, -0.62, -0.06) * CFrame.Angles(math.rad(-160), math.rad(42), math.rad(-3)), Time = 0.03},
@@ -253,6 +254,24 @@ vape.Libraries.auraanims = {
 		{CFrame = CFrame.Angles(math.rad(180), 0, math.rad(15)), Time = 0.12},
 		{CFrame = CFrame.Angles(math.rad(90), 0, math.rad(15)), Time = 0.12},
 		{CFrame = CFrame.Angles(0, 0, math.rad(15)), Time = 0.12}
+	},
+	RiseSharp = {
+	{CFrame = CFrame.new(-0.15, -0.12, -0.16) * CFrame.Angles(math.rad(-45), math.rad(42), math.rad(-60)), Time = 0.1},
+	{CFrame = CFrame.new(-0.50, -0.55, -0.12) * CFrame.Angles(math.rad(-150), math.rad(48), math.rad(-7)), Time = 0.08},
+	{CFrame = CFrame.new(-0.58, -0.65, -0.05) * CFrame.Angles(math.rad(-162), math.rad(44), math.rad(-3)), Time = 0.03},
+	{CFrame = CFrame.new(-0.54, -0.80, 0.20) * CFrame.Angles(math.rad(-168), math.rad(46), math.rad(-2)), Time = 0.03}
+	},
+	RiseCompact = {
+	{CFrame = CFrame.new(-0.10, -0.08, -0.14) * CFrame.Angles(math.rad(-38), math.rad(34), math.rad(-52)), Time = 0.1},
+	{CFrame = CFrame.new(-0.40, -0.45, -0.10) * CFrame.Angles(math.rad(-135), math.rad(40), math.rad(-6)), Time = 0.08},
+	{CFrame = CFrame.new(-0.46, -0.54, -0.04) * CFrame.Angles(math.rad(-148), math.rad(38), math.rad(-2)), Time = 0.03},
+	{CFrame = CFrame.new(-0.44, -0.70, 0.14) * CFrame.Angles(math.rad(-152), math.rad(40), math.rad(-1)), Time = 0.03}
+	},
+	Rise = {
+	{CFrame = CFrame.new(-0.18, -0.20, -0.20) * CFrame.Angles(math.rad(-55), math.rad(46), math.rad(-68)), Time = 0.1},
+	{CFrame = CFrame.new(-0.58, -0.62, -0.16) * CFrame.Angles(math.rad(-160), math.rad(52), math.rad(-10)), Time = 0.08},
+	{CFrame = CFrame.new(-0.65, -0.74, -0.08) * CFrame.Angles(math.rad(-170), math.rad(48), math.rad(-4)), Time = 0.03},
+	{CFrame = CFrame.new(-0.60, -0.90, 0.22) * CFrame.Angles(math.rad(-175), math.rad(50), math.rad(-3)), Time = 0.03}
 	},
 	Pushdown = {
 		{CFrame = CFrame.new(0.69, -0.7, 0.6) * CFrame.Angles(math.rad(-30), math.rad(50), math.rad(-90)), Time = 0.1},
